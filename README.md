@@ -8,7 +8,7 @@ Projeto pessoal para estudo e portfólio, sem fins comerciais.
 
 ---
 
-**Créditos:** Estrutura base adaptada de template aberto, personalizada para meu perfil.
+**Créditos:** Estrutura base de template aberto.
 
 ---
 
