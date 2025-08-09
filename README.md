@@ -1,4 +1,4 @@
-# Perfil Profissional - Cassio W. S. Lima
+# Perfil Profissional - Cassio W.  S.  Lima
 
 Este projeto é um site pessoal desenvolvido para apresentar minhas habilidades, experiência e formações em desenvolvimento web e engenharia de software.
 
