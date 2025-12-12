@@ -1,6 +1,6 @@
 /* --- 1. Variáveis e Reset (Moderno) --- */
 :root {
-  --primary-color: #42c9ff;  /* Azul Neon */
+  --primary-color: #42c9ff; 
   --primary-glow: rgba(66, 201, 255, 0.5);
   --bg-dark: #000405;
   --bg-card: rgba(0, 0, 0, 0.4);
@@ -526,7 +526,6 @@ button[type="submit"] {
   bottom: -45px;
 }
 /* --- Cores Específicas das Tecnologias --- */
-
 .tech-item.js:hover { 
     background: #f7df1e; 
     color: #000;
