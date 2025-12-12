@@ -1,99 +1,102 @@
-// --- 1. DADOS DOS PROJETOS (Simulando um Banco de Dados/JSON) ---
-const projectsData = [
-    {
-        id: 1,
-        title: "Projeto Cyberpunk",
-        tech: ["HTML5", "CSS Grid", "Javascript"],
-        desc: "Um site imersivo criado para promover um jogo fictício. Contém animações parallax, efeitos de glitch e otimização SEO.",
-        img: "https://source.unsplash.com/random/800x600/?cyberpunk",
-        link: "https://github.com/seusuario/projeto1"
-    },
-    {
-        id: 2,
-        title: "Dashboard Financeiro",
-        tech: ["React", "Node.js", "Chart.js"],
-        desc: "Sistema completo de gestão financeira com gráficos em tempo real, autenticação JWT e modo escuro automático.",
-        img: "https://source.unsplash.com/random/800x600/?finance,tech",
-        link: "#"
-    },
-    {
-        id: 3,
-        title: "App de Delivery",
-        tech: ["React Native", "Firebase"],
-        desc: "Aplicativo mobile multiplataforma para entregas. Inclui geolocalização, carrinho de compras e pagamentos via Stripe.",
-        img: "https://source.unsplash.com/random/800x600/?food,app",
-        link: "#"
-    },
-    {
-        id: 4,
-        title: "RPG Text Adventure",
-        tech: ["Python", "Terminal"],
-        desc: "Um jogo clássico baseado em texto rodando no terminal, com sistema de batalha, inventário e múltiplos finais.",
-        img: "https://source.unsplash.com/random/800x600/?dungeons",
-        link: "#"
-    }
-];
-
-// --- 2. RENDERIZAÇÃO DINÂMICA (Estilo React/Vue) ---
-const gridContainer = document.getElementById('grid-container');
-
-function renderProjects() {
-    gridContainer.innerHTML = projectsData.map(project => `
-        <div class="game-card" onclick="openModal(${project.id})">
-            <div class="card-bg" style="background-image: url('${project.img}')"></div>
-            <div class="card-content">
-                <h3>${project.title}</h3>
-                <p style="color: #aaa; font-size: 0.9rem">${project.tech[0]}</p>
-            </div>
-        </div>
-    `).join('');
+/* --- 1. Inicializando Animações (AOS) --- */
+// Verifica se a biblioteca foi carregada para evitar erros
+if (typeof AOS !== 'undefined') {
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
 }
 
-// Inicializa a renderização
-renderProjects();
-
-// --- 3. LÓGICA DO MODAL ---
-const modal = document.getElementById('project-modal');
-const closeModalBtn = document.querySelector('.close-modal');
-
-// Elementos internos do modal para preencher
-const mTitle = document.getElementById('modal-title');
-const mDesc = document.getElementById('modal-desc');
-const mTags = document.getElementById('modal-tags');
-const mImg = document.getElementById('modal-image');
-const mLink = document.getElementById('modal-link');
-
-// Função chamada ao clicar no card (definida no HTML injetado acima)
-window.openModal = function (id) {
-    const project = projectsData.find(p => p.id === id);
-
-    if (project) {
-        mTitle.innerText = project.title;
-        mDesc.innerText = project.desc;
-        mImg.style.backgroundImage = `url('${project.img}')`;
-        mLink.href = project.link;
-
-        // Limpa e adiciona as tags
-        mTags.innerHTML = project.tech.map(t => `<span>${t}</span>`).join('');
-
-        modal.classList.add('active');
-    }
+/* --- 2. Efeito de Digitação (Typed.js) --- */
+if (document.querySelector('.typed-text')) {
+  const typed = new Typed('.typed-text', {
+    strings: [
+      'Desenvolvedor Full-Stack',
+      'Engenheiro de Software',
+      'Entusiasta de IA'
+    ],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true,
+    showCursor: true,
+    cursorChar: '|'
+  });
 }
 
-// Fechar Modal
-closeModalBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
+/* --- 3. Gráfico de Skills (Círculos) --- */
+const skillCircles = document.querySelectorAll('.skill-circle');
+skillCircles.forEach((circle) => {
+  const percent = circle.getAttribute('data-percent');
+  circle.style.background = `conic-gradient(#42c9ff 0% ${percent}%, #1a1a1a ${percent}% 100%)`;
 });
 
-// Fechar ao clicar fora
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.classList.remove('active');
+/* --- 4. FAQ (Sanfona) --- */
+const faqButtons = document.querySelectorAll('.faq-question');
+faqButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    // Fecha os outros (opcional, remova se quiser abrir vários ao mesmo tempo)
+    const activeItem = document.querySelector('.faq-item.active');
+    if (activeItem && activeItem !== button.parentElement) {
+      activeItem.classList.remove('active');
+    }
+    
+    // Abre/Fecha o atual
+    const item = button.parentElement;
+    item.classList.toggle('active');
+  });
 });
 
-// --- 4. MENU MOBILE ---
-const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+/* --- 5. Modal de Contato --- */
+const modal = document.getElementById('contactModal');
+const openBtn = document.querySelector('.hire'); // Botão "Contrate-me"
+const closeBtn = document.getElementById('closeModal');
+const successPopup = document.getElementById('successPopup');
+const contactForm = document.querySelector('#contactModal form');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+// Só executa se os elementos existirem na página
+if (openBtn && modal && closeBtn && contactForm) {
+  
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';   
+  });
+
+  // Fechar clicando fora do modal
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  // Enviar formulário
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    modal.style.display = 'none';
+    contactForm.reset();
+
+    // Mostra popup de sucesso
+    successPopup.style.display = 'flex';
+    setTimeout(() => {
+      successPopup.style.display = 'none';
+    }, 3000);
+  });
+}
+
+/* --- 6. Smooth Scroll para Links Internos --- */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
 });
