@@ -1,166 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cássio W. S. Lima – Desenvolvedor Web e Programador Trainee</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link
-      href=""
-      rel="stylesheet" />
-  </head>
-  <body>
-   
-    <section class="home-section">
-      <div class="home-box" >
-        <div class="home-container">
-          <div class="home-content">
-            <h1> Sou <span>Cassio W. S. Lima</span></h1>
-            <h2>Desenvolvedor Web e Programador Trainee</h2>
-            <p style="text-align: justify;">
-              estudante de Engenharia de Software com forte interesse em desenvolvimento de software e tecnologias emergentes. Possuo formação em diversas linguagens de programação e inteligência artificial, e estou dedicado a aplicar esses conhecimentos em projetos práticos e oportunidades de estágio. Busco crescimento profissional contínuo, focando em inovação, soluções eficientes e trabalho colaborativo.
-            </p> <br>
-            <div class="home-buttons">
-              <a href="https://www.linkedin.com/in/c%C3%A1ssio-w-s-lima-27390b158/" target="noopener noreferrer" class="btn hire">Contrate-me</a>
-              <a href="https://github.com/Cassiowelison" target="noopener noreferrer" class="btn work">Veja meu trabalho</a>
-            </div>
-          </div>
-          <div class="home-img">
-            <img src="FotoPerfilCV.png" alt="Profile Imagem" />
-          </div>
-          <div class="home-img-2"
-            style="background-image: url('./images/FundoBlue.png')"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cássio W. S. Lima – Desenvolvedor Web</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <section class="home-section" id="home">
+    <div class="home-box" data-aos="fade-up">
+
+      <div class="home-bg-overlay"></div>
+
+      <div class="home-content">
+        <h1>Sou <span>Cássio W. S. Lima</span></h1>
+        <h2><span class="typed-text"></span></h2>
+
+        <p>
+          Estudante de Engenharia de Software com forte interesse em desenvolvimento e tecnologias emergentes.
+          Possuo formação em diversas linguagens e IA, dedicado a aplicar conhecimentos em projetos práticos.
+        </p>
+
+        <div class="home-buttons">
+          <a href="#" class="btn hire">Contrate-me</a>
+          <a href="https://github.com/Cassiowelison" target="_blank" class="btn work">Github</a>
         </div>
       </div>
-    </section>
 
-    <!-- Skills and Experience -->
-    <section class="skills-experience-section">
-      <div class="skills-experience-box">
-        <!-- Skills -->
-        <div class="skills-card">
-          <h2>Habilidade</h2>
-          <div class="skills-chart">
-            <div class="skill-circle" data-percent="52">
-              <div class="skill-content">
-                <span>52%</span>
-                <p>Full-Stack</p>
-              </div>
-            </div>
-            <div class="skill-circle" data-percent="08">
-              <div class="skill-content">
-                <span>08%</span>
-                <p>Data Science</p>
-              </div>
-            </div>
-            <div class="skill-circle" data-percent="11">
-              <div class="skill-content">
-                <span>11%</span>
-                <p>UI/UX Figma</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experience -->
-        <div class="experience-card">
-          <h2>Experiencia</h2>
-          <div class="experience-list">
-            <div class="experience-item">
-              <p>Análise Desenvolvimento de Software</p>
-              <span>3 Semestre</span>
-            </div>
-            <div class="experience-item">
-              <p>Tecnologia da informação</p>
-              <span>2 Semestre</span>
-            </div>
-            <div class="experience-item">
-              <p>Engenharia Software</p>
-              <span>2 Semestre</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq-section">
-      <div class="faq-content">
-        <div class="faq-box">
-          <h2>Perguntas frequente</h2>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              Formações e Habilidades
-              <i class="bx bx-chevron-down icon"></i>
-            </button>
-            <div class="faq-answer">
-              Estudante de Engenheiro de Software e Análise e Desenvolvimento de Sistemas. <br>
-              Concluir cursos práticos em HTML5, CSS3, JavaScript, Node.js e PHP, React, Figma UI/UX, Power BI e IA. Possuo experiência com ferramentas como GitHub, VS Code e Excel intermediário. Busco aplicar minhas habilidades em projetos reais e contribuir para equipes de tecnologia desde o início da minha jornada.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              Como podemos trabalhar juntos?
-              <i class="bx bx-chevron-down icon"></i>
-            </button>
-            <div class="faq-answer">
-              Pode entrar em contato comigo através do formulário de contato ou pelas minhas redes sociais. Estou aberto a colaborações, projetos freelance e oportunidades de estágio.
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              Qual é o seu objetivo profissional?
-              <i class="bx bx-chevron-down icon"></i>
-            </button>
-            <div class="faq-answer">
-              Meu objetivo profissional é me tornar um desenvolvedor fullstack, contribuindo para projetos inovadores e desafiadores. Estou sempre em busca de aprender novas tecnologias e aprimorar minhas habilidades.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-left">
-          <p>&copy; 2025 Cássio Welison. All Rights Reserved.</p>
-        </div>
-        <div class="footer-right">
-          <a href="#"><i class="bx bxl-instagram"></i></a>
-          <a href="https://www.facebook.com/cassio.welison"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.linkedin.com/in/c%C3%A1ssio-w-s-lima-27390b158/" target="noopener noreferrer"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/Cassiowelison" target="nooperer noreferrer"><i class="bx bxl-github"></i></a>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Contact Popup Modal -->
-    <div class="contact-modal" id="contactModal">
-      <div class="contact-modal-content">
-        <span class="close-modal" id="closeModal">&times;</span>
-        <h1>Cotante-me</h1>
-        <form>
-          <div class="input-field">
-            <input type="text" placeholder="Seu nome" required />
-            <input type="email" placeholder="Seu email" required />
-          </div>
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
+      <div class="home-img">
+        <img src="FotoPerfilCV.png" alt="Foto de Perfil Cássio" />
       </div>
     </div>
+  </section>
+  <section class="tech-stack-section">
+  <div class="tech-container">
+    <div class="tech-slider">
+      <div class="tech-track">
+        
+        <div class="tech-item js" title="JavaScript"><i class='bx bxl-javascript'></i></div>
+        <div class="tech-item react" title="React"><i class='bx bxl-react'></i></div>
+        <div class="tech-item node" title="Node.js"><i class='bx bxl-nodejs'></i></div>
+        <div class="tech-item html" title="HTML5"><i class='bx bxl-html5'></i></div>
+        <div class="tech-item css" title="CSS3"><i class='bx bxl-css3'></i></div>
+        <div class="tech-item python" title="Python"><i class='bx bxl-python'></i></div>
+        <div class="tech-item git" title="Git"><i class='bx bxl-git'></i></div>
+        <div class="tech-item sql" title="SQL"><i class='bx bxs-data'></i></div>
 
-    <!-- Success Popup Modal -->
-    <div class="success-popup" id="successPopup">
-      <div class="success-content">
-        <p>Message sent successfully!</p>
+        <div class="tech-item js" title="JavaScript"><i class='bx bxl-javascript'></i></div>
+        <div class="tech-item react" title="React"><i class='bx bxl-react'></i></div>
+        <div class="tech-item node" title="Node.js"><i class='bx bxl-nodejs'></i></div>
+        <div class="tech-item html" title="HTML5"><i class='bx bxl-html5'></i></div>
+        <div class="tech-item css" title="CSS3"><i class='bx bxl-css3'></i></div>
+        <div class="tech-item python" title="Python"><i class='bx bxl-python'></i></div>
+        <div class="tech-item git" title="Git"><i class='bx bxl-git'></i></div>
+        <div class="tech-item sql" title="SQL"><i class='bx bxs-data'></i></div>
+
+        <div class="tech-item js" title="JavaScript"><i class='bx bxl-javascript'></i></div>
+        <div class="tech-item react" title="React"><i class='bx bxl-react'></i></div>
+        <div class="tech-item node" title="Node.js"><i class='bx bxl-nodejs'></i></div>
+        <div class="tech-item html" title="HTML5"><i class='bx bxl-html5'></i></div>
+        <div class="tech-item css" title="CSS3"><i class='bx bxl-css3'></i></div>
+        <div class="tech-item python" title="Python"><i class='bx bxl-python'></i></div>
+        <div class="tech-item git" title="Git"><i class='bx bxl-git'></i></div>
+        <div class="tech-item sql" title="SQL"><i class='bx bxs-data'></i></div>
+
       </div>
     </div>
+  </div>
+</section>
+  <section class="skills-experience-section" id="skills">
+    <div class="skills-experience-box">
 
-    <script src="script.js"></script>
-  </body>
+      <div class="skills-card" data-aos="fade-right">
+        <h2>Habilidades</h2>
+        <div class="skills-chart">
+
+          <div class="skill-circle" data-percent="52">
+            <div class="skill-content">
+              <span class="count-up" data-count="52">52</span><span>%</span>
+              <p>Full-Stack</p>
+            </div>
+          </div>
+
+          <div class="skill-circle" data-percent="25">
+            <div class="skill-content">
+              <span class="count-up" data-count="25">25</span><span>%</span>
+              <p>Data Science</p>
+            </div>
+          </div>
+
+          <div class="skill-circle" data-percent="40">
+            <div class="skill-content">
+              <span class="count-up" data-count="40">40</span><span>%</span>
+              <p>UI/UX Figma</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="experience-card" data-aos="fade-left">
+        <h2>Experiência Acadêmica</h2>
+        <div class="experience-list">
+          <div class="experience-item">
+            <p>Análise e Desenv. de Sistemas</p>
+            <span>Julho de 2026</span>
+          </div>
+          <div class="experience-item">
+            <p>Engenharia da Computação</p>
+            <span>3º Semestre</span>
+          </div>
+          <div class="experience-item">
+            <p>Engenharia de Software</p>
+            <span>4º Semestre</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq">
+    <div class="faq-box" data-aos="zoom-in">
+      <h2>Perguntas Frequentes</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Formações e Habilidades
+          <i class="bx bx-chevron-down icon"></i>
+        </button>
+        <div class="faq-answer">
+          Estudante de Engenharia de Software e ADS. Conhecimentos práticos em HTML5, CSS3, JavaScript, React e Figma.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como podemos trabalhar juntos?
+          <i class="bx bx-chevron-down icon"></i>
+        </button>
+        <div class="faq-answer">
+          Estou aberto a estágios e projetos freelance. Entre em contato pelo botão "Contrate-me".
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Qual é o seu objetivo?
+          <i class="bx bx-chevron-down icon"></i>
+        </button>
+        <div class="faq-answer">
+          Meu objetivo é me tornar um desenvolvedor Full-stack Sênior, contribuindo com inovação.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>&copy; 2025 Cássio Welison. Todos os direitos reservados.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.facebook.com/cassio.welison"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/c%C3%A1ssio-w-s-lima-27390b158/" target="_blank"><i
+            class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/Cassiowelison" target="_blank"><i class="bx bxl-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="contact-modal" id="contactModal">
+    <div class="contact-modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <h1>Contate-me</h1>
+      <form>
+        <div class="input-field">
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu email" required />
+        </div>
+        <textarea placeholder="Sua mensagem..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="success-popup" id="successPopup">
+    <div class="success-content">
+      <p>Mensagem enviada com sucesso! 🚀</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
